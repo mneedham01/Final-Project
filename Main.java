@@ -21,8 +21,8 @@ public class Main {
             System.err.println("Cannot locate file.");
             System.exit(-1);
         }
-        // skip first line
-        file.next();
+        // skip first two lines
+        file.nextLine();
         while (file.hasNextLine()) {
             String line = file.nextLine();
             // format: SOURCE_SUBREDDIT tab TARGET_SUBREDDIT tab POST_ID tab TIMESTAMP tab POST_LABEL tab POST_PROPERTIES
