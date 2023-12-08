@@ -11,9 +11,10 @@ import java.util.Scanner;
 public class Main {
 
     /*
-     * Method to read in data
+     * Reads in data and creates graph
      */
-    public static void readData(String filename) {
+    public static void main(String[] args) {
+        String filename = (args.length > 0) ? args[0] : "soc-redditHyperlinks-body.tsv";
         Scanner file = null;
         try {
             file = new Scanner(new File(filename));
@@ -21,7 +22,7 @@ public class Main {
             System.err.println("Cannot locate file.");
             System.exit(-1);
         }
-        // skip first two lines
+        // skip first line
         file.nextLine();
         while (file.hasNextLine()) {
             String line = file.nextLine();
@@ -39,13 +40,6 @@ public class Main {
             System.out.println("source = "+ source+ "; target = "+ target+"; id = "+ id+ "; sentiment = "+ sentiment);
         }
         file.close();
-    }
-
-    /*
-     *
-     */
-    public static void main(String[] args) {
-        readData("soc-redditHyperlinks-body.tsv");
     }
 
 }
