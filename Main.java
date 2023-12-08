@@ -34,7 +34,7 @@ public class Main {
             String source = fields[0];
             String target = fields[1];
             String id = fields[2];
-            String sentiment = fields[5];
+            Integer sentiment = Integer.parseInt(fields[5]);
 
             System.out.println("source = "+ source+ "; target = "+ target+"; id = "+ id+ "; sentiment = "+ sentiment);
         }
