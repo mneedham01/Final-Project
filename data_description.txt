@@ -1,0 +1,32 @@
+REDDIT HYPERLINK NETWORK [FROM HYPERLINKS EXTRACTED FROM BODY OF THE POST]
+
+* Bibliographic Information *
+- Downloaded from Stanford Large Network Dataset Collection (https://snap.stanford.edu/data/soc-RedditHyperlinks.html)
+- Extracted from publicly available Reddit data from Jan 2014 -> April 2017
+- From paper "Community Interaction and Conflict on the Web" Srijan Kumar, William L. Hamilton, Jure Leskovec, Dan Jurafsky
+- Computer Science department and Linguistics department, Stanford University, USA
+- http://snap.stanford.edu/conflict/
+    BibTeX citation:
+    @inproceedings{kumar2018community,
+    title={Community interaction and conflict on the web},
+    author={Kumar, Srijan and Hamilton, William L and Leskovec, Jure and Jurafsky, Dan},
+    booktitle={Proceedings of the 2018 World Wide Web Conference on World Wide Web},
+    pages={933--943},
+    year={2018},
+    organization={International World Wide Web Conferences Steering Committee}
+    }
+
+* Background Information *
+- Subreddit -> Subreddit hyperlink network
+- Hyperlink: originates from post in "source community," links to set in "target community"
+- Each hyperlink has three pieces of data: timestamp, sentiment of "source community," text property vector
+
+* Statistics *
+- 55,863 nodes (subreddits)
+- 858,490 edges (hyperlinks)
+
+* Qualities of Graph *
+- Directed
+- No Self-Edges
+- Duplicated Edges OK
+
