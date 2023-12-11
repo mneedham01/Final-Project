@@ -16,8 +16,7 @@ public class Main {
      */
     public static void main(String[] args) {
         // establish graph
-        MutableGraph<String> graph =
-            GraphBuilder.directed().build();
+        MutableValueGraph<String, Integer> graph = ValueGraphBuilder.directed().build();
 
         // start reading in file
         String filename = (args.length > 0) ? args[0] : "soc-redditHyperlinks-body.tsv";
@@ -40,8 +39,9 @@ public class Main {
             String[] fields = line.split("\\s+");
             String source = fields[0];
             String target = fields[1];
-            String id = fields[2];
             Integer sentiment = Integer.parseInt(fields[5]);
+
+            graph.putEdgeValue(source, target, sentiment);
 
             System.out.println("source = "+ source+ "; target = "+ target+"; id = "+ id+ "; sentiment = "+ sentiment);
         }
