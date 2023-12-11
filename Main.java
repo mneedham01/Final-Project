@@ -14,6 +14,11 @@ public class Main {
      * Reads in data and creates graph
      */
     public static void main(String[] args) {
+        // establish graph
+        MutableGraph<String> graph =
+            GraphBuilder.directed().build();
+
+        // start reading in file
         String filename = (args.length > 0) ? args[0] : "soc-redditHyperlinks-body.tsv";
         Scanner file = null;
         try {
